@@ -194,9 +194,9 @@ $black: #202731
     color: $black
     cursor: pointer
     &.selected
-      background-color: hsl(200, 100, 70%)
+      background-color: hsl(200, 100%, 70%)
     &.highlighted
-      background-color: hsl(200, 100, 50%)
+      background-color: hsl(200, 100%, 50%)
 
   .option-badge
     display: flex
