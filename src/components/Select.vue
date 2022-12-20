@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted, watchEffect, ref, watch } from 'vue';
+import { ref, watch, watchEffect } from 'vue';
 
 const props = defineProps({
   options: {
@@ -69,11 +69,9 @@ const handler = (e) => {
 }
 
 watchEffect((onCleanup) => {
-  console.log('[watchEffect] add')
   selectRef.value?.addEventListener('keydown', handler)
 
   onCleanup(() => {
-    console.log('[watchEffect] remove')
     selectRef.value?.removeEventListener('keydown', handler)
   })
 })
